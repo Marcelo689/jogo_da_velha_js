@@ -63,6 +63,12 @@ function checkXVitoria(){
     var diagonal2 = marcadoComX(div7) && marcadoComX(div5) && marcadoComX(div3);
     if(diagonal2)
         saida.innerHTML = "O jogador X Venceu";
+        
+    if(linha1Horizontal || linha2Horizontal || linha3Horizontal 
+        || linha1Vertical || linha2Vertical || linha3Vertical
+        || diagonal1 || diagonal2
+    )
+        acabou = true;
 }
 
 function checkOVitoria(){
@@ -92,6 +98,12 @@ function checkOVitoria(){
     var diagonal2 = marcadoComO(div7) && marcadoComO(div5) && marcadoComO(div3);
     if(diagonal2)
         saida.innerHTML = "O jogador (O) Venceu";
+
+    if(linha1Horizontal || linha2Horizontal || linha3Horizontal 
+        || linha1Vertical || linha2Vertical || linha3Vertical
+        || diagonal1 || diagonal2
+    )
+        acabou = true;
 }
 
 function checkaVitoria(){
